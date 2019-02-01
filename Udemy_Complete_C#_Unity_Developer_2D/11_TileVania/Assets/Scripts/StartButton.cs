@@ -1,0 +1,12 @@
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
+public class StartButton : MonoBehaviour
+{
+
+    public void StartFirstLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+}
