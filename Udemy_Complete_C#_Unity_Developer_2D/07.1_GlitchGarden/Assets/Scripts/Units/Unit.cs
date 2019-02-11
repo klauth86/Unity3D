@@ -22,7 +22,7 @@ public abstract class Unit : MonoBehaviour {
         Destroy(gameObject);
         if (_dieVfx) {
             var vfx = Instantiate(_dieVfx, transform.position, transform.rotation);
-            Destroy(vfx);
+            Destroy(vfx, 1);
         }
         if (_dieSfx)
             GameSingleton.Instance.PlayAudioClip(_dieSfx);

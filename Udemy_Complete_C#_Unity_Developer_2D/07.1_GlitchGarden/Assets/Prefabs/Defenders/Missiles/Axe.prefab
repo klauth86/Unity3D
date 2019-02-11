@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4120524923558698}
   - component: {fileID: 212403431165257018}
   - component: {fileID: 114536667360027388}
-  - component: {fileID: 136027991959783114}
+  - component: {fileID: 70335167636647254}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -42,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &70335167636647254
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462925057333186}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.375, y: 0.34375}
+  m_Direction: 0
 --- !u!114 &114536667360027388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,20 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _velocity: 1
   _angleVelocity: 300
-  _damage: 200
---- !u!136 &136027991959783114
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462925057333186}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.1875
-  m_Height: 0.34375
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  _damage: 100
 --- !u!212 &212403431165257018
 SpriteRenderer:
   m_ObjectHideFlags: 1
