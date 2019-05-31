@@ -25,8 +25,9 @@ public class BulletCube : MonoBehaviour {
                 var cntBefore = Enemy.ActiveEnemies.Count;
                 Enemy.ActiveEnemies.Remove(enemy);
                 if (Enemy.ActiveEnemies.Count == 0 && cntBefore == 1) {
-                    Manager.Instance.ShowMessage("Whoaahah!? Beaten by sucker like you!!!");
+                    Manager.Instance.EndHunt();
                 }
+                Destroy(item.gameObject, 2);
             }
         }
     }

@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
-    public event GameEvent GameEvent;
+    public event GameEvent OnStartHunt;
+    public event GameEvent OnEndHunt;
+
     [SerializeField] private GameObject _messagePanel;
     [SerializeField] private Text _messageText;
 
@@ -23,19 +25,34 @@ public class Manager : MonoBehaviour {
     }
 
     private void OnDisable() {
-        Instance.GameEvent = null;
+        Instance.OnStartHunt = null;
         Instance = null;
     }
 
     // Use this for initialization
     void Start() {
         ShowMessage("Hello there! There is a treasure chest right on this level! So be quick and gold will stick!");
-        GameEvent += () => { ShowMessage("Poor Adventurer!  Now yuu'll see our wrath!"); };
+        OnStartHunt += () => {
+            ShowMessage("Poor Adventurer!  Now yuu'll see our wrath!");
+            var light = FindObjectOfType<Light>();
+            light.color = Color.red;
+        };
+
+        OnEndHunt += () => {
+            ShowMessage("Whoaahah!? Beaten by sucker like you!!!");
+            var light = FindObjectOfType<Light>();
+            light.color = new Color(1.0f, 244.0f/255, 214.0f/255, 1.0f);
+        };
     }
 
-    public void ProcessGameEvent() {
-        if (GameEvent != null)
-            GameEvent();
+    public void StartHunt() {
+        if (OnStartHunt != null)
+            OnStartHunt();
+    }
+
+    public void EndHunt() {
+        if (OnEndHunt != null)
+            OnEndHunt();
     }
 
     public void ShowMessage(string message) {

@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Manager.Instance.GameEvent += () => {
+        Manager.Instance.OnStartHunt += () => {
             foreach (var item in _points) {
                 Instantiate(_enemyPrefab, new Vector3(item.position.x, _enemyPrefab.transform.localScale.y / 2, item.position.z), Quaternion.identity);
             }
