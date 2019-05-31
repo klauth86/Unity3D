@@ -30,7 +30,7 @@ public class Manager : MonoBehaviour {
     // Use this for initialization
     void Start() {
         ShowMessage("Hello there! There is a treasure chest right on this level! So be quick and gold will stick!");
-        GameEvent += () => { ShowMessage("Poor Adventurer!  No yuu'll see our wrath!"); };
+        GameEvent += () => { ShowMessage("Poor Adventurer!  Now yuu'll see our wrath!"); };
     }
 
     // Update is called once per frame
