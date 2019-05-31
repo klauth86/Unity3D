@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BulletCube : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField] private float _explodionForce;
+    [SerializeField] private float _explodionRadius;
+    [SerializeField] private LayerMask _explodionLayer;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +15,16 @@ public class BulletCube : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter(Collision collision) {
+        Debug.Log(collision.transform.name);
+        Destroy(gameObject);
+        var hits = Physics.OverlapSphere(collision.transform.position, _explodionRadius, _explodionLayer);
+        foreach (var item in hits) {
+            var rb = item.gameObject.GetComponent<Rigidbody>();
+            if (rb) {
+                rb.AddExplosionForce(_explodionForce, collision.transform.position, _explodionRadius);
+            }
+        }
+    }
 }
