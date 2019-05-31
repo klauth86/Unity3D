@@ -33,13 +33,7 @@ public class Manager : MonoBehaviour {
         GameEvent += () => { ShowMessage("Poor Adventurer!  Now yuu'll see our wrath!"); };
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
-
     public void ProcessGameEvent() {
-        Debug.Log("ProcessGameEvent");
         if (GameEvent != null)
             GameEvent();
     }

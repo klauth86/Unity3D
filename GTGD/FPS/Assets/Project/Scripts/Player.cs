@@ -7,11 +7,6 @@ public class Player : MonoBehaviour {
     [SerializeField] private float _timeForCharge;
 
     private float _timeForShot;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
