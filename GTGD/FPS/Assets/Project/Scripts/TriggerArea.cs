@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TriggerArea : MonoBehaviour {
 
@@ -15,7 +13,7 @@ public class TriggerArea : MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.GetComponent<Player>()) {
+        if (other.gameObject.GetComponentInChildren<Player>()) {
             Manager.Instance.ProcessGameEvent();
             Destroy(gameObject);
         }

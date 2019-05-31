@@ -30,6 +30,7 @@ public class Manager : MonoBehaviour {
     // Use this for initialization
     void Start() {
         ShowMessage("Hello there! There is a treasure chest right on this level! So be quick and gold will stick!");
+        GameEvent += () => { ShowMessage("Poor Adventurer!  No yuu'll see our wrath!"); };
     }
 
     // Update is called once per frame
@@ -58,6 +59,6 @@ public class Manager : MonoBehaviour {
             yield return new WaitForSeconds(0.01f);
         }
         _messagePanel.SetActive(false);
-        image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
     }
 }

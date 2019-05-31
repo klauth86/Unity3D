@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class BulletCube : MonoBehaviour {
 
@@ -23,6 +24,10 @@ public class BulletCube : MonoBehaviour {
         foreach (var item in hits) {
             var rb = item.gameObject.GetComponent<Rigidbody>();
             if (rb) {
+                rb.isKinematic = false;
+                var nma = item.GetComponent<NavMeshAgent>();
+                if (nma)
+                    nma.enabled = false;
                 rb.AddExplosionForce(_explodionForce, collision.transform.position, _explodionRadius);
             }
         }
