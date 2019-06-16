@@ -41,6 +41,9 @@ namespace FPS.Master {
 
             if (Input.GetKeyUp(KeyCode.I))
                 InputKeyUpEvent?.Invoke(KeyCode.I);
+
+            if (Input.GetKeyUp(KeyCode.Q))
+                CallGameOverEvent();
         }
     }
 }

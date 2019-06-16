@@ -7,11 +7,15 @@ namespace FPS.Master {
         private void OnEnable() {
             Master.ToggleInventoryUIEvent += TogglePause;
             Master.ToggleMenuUIEvent += TogglePause;
+            Master.RestartLevelEvent += TogglePause;
+            Master.GoToMenuSceneEvent += TogglePause;
         }
 
         private void OnDisable() {
             Master.ToggleInventoryUIEvent -= TogglePause;
             Master.ToggleMenuUIEvent -= TogglePause;
+            Master.RestartLevelEvent -= TogglePause;
+            Master.GoToMenuSceneEvent -= TogglePause;
         }
 
         private void TogglePause() {
