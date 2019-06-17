@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 0}
   _lambdaRate: 1
-  _routineRate: 0.00125
+  _routineRate: 0.0125

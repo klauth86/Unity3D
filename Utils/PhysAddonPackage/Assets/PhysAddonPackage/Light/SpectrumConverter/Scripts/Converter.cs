@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
 namespace PhysAddonPackage.Light.SpectrumConverter.Scripts {
-    public static class SpectrumConverter {
+    public static class Converter {
         public const float MinLambda = 380f;
-        public const float MaxLambda = 780f;
+        public const float MaxLambda = 780.1f;
 
-        public static Color ConvertWavelengthToColor(SpectralRadianceDensity density) {
+        public static Color ConvertDensityToVisibleSpectralColor(SpectralRadianceDensity density) {
             float x = 0;
             float y = 0;
             float z = 0;
@@ -84,9 +84,9 @@ namespace PhysAddonPackage.Light.SpectrumConverter.Scripts {
                 {0.0001f,0.0000f,0.0000f}, {0.0001f,0.0000f,0.0000f}, {0.0000f,0.0000f,0.0000f}
             };
 
-            for (i = 0, lambda = MinLambda; lambda <= MaxLambda; i++, lambda += 5) {
+            for (i = 0, lambda = MinLambda; lambda < MaxLambda; i++, lambda += 5) {
                 float Me;
-                Me = density(lambda * 1E-9f);
+                Me = density(lambda * Constant.MultiplierNano);
                 X += Me * cie_colour_match[i, 0];
                 Y += Me * cie_colour_match[i, 1];
                 Z += Me * cie_colour_match[i, 2];

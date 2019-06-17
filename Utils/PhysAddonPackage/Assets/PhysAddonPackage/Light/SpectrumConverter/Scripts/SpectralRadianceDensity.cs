@@ -26,7 +26,7 @@ namespace PhysAddonPackage.Light.SpectrumConverter.Scripts {
         /// </summary>
         /// <param name="T"></param>
         /// <returns></returns>
-        public static SpectralRadianceDensity BlackBodySpectralRadianceDensity(float T) {
+        public static SpectralRadianceDensity GenerateBlackBodySpectralRadianceDensity(float T) {
             var k1 = 2 * Mathf.PI * Constant.Planck_H * Constant.SpeedOfLight_C * Constant.SpeedOfLight_C;
             var k2 = Constant.Planck_H * Constant.SpeedOfLight_C / Constant.Boltzmann_K;
             return new SpectralRadianceDensity(lambda => {
