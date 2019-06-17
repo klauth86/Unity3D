@@ -2,7 +2,7 @@
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace FPS.Master {
-    public class GameManager_TogglePlayerController : GameManager_Base {
+    public class GameManager_TogglePlayerController : Subscriber_Base<GameManager_Master> {
         [SerializeField]private FirstPersonController _playerController;
 
         private void OnEnable() {

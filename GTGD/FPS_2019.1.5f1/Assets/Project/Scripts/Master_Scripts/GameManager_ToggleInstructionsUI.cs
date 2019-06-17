@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace FPS.Master {
-    public class GameManager_ToggleInstructionsUI : GameManager_Base {
+    public class GameManager_ToggleInstructionsUI : Subscriber_Base<GameManager_Master> {
         [SerializeField]private GameObject _instructionsUI;
 
         private void OnEnable() {

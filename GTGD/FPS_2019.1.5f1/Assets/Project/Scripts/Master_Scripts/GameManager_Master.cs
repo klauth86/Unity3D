@@ -13,7 +13,7 @@ namespace FPS.Master {
         public bool IsGameOver;
         public bool IsMenuUIOn;
         public bool IsInventoryUIOn;
-        
+
         public void CallToggleMenuUIEvent() {
             ToggleMenuUIEvent?.Invoke();
         }
@@ -41,6 +41,9 @@ namespace FPS.Master {
 
             if (Input.GetKeyUp(KeyCode.I))
                 InputKeyUpEvent?.Invoke(KeyCode.I);
+
+            if (Input.GetKeyUp(KeyCode.E))
+                InputKeyUpEvent?.Invoke(KeyCode.E);
 
             if (Input.GetKeyUp(KeyCode.Q))
                 CallGameOverEvent();

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace FPS.Master {
-    public class GameManager_ToggleCursor : GameManager_Base {
+    public class GameManager_ToggleCursor : Subscriber_Base<GameManager_Master> {
         private bool _isCursorLocked = true;
 
         private void OnEnable() {

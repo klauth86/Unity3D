@@ -1,7 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
 
 namespace FPS.Master {
-    public class GameManager_RestartLevel : GameManager_Base {
+    public class GameManager_RestartLevel : Subscriber_Base<GameManager_Master> {
         private void OnEnable() {
             Master.RestartLevelEvent += RestartLevel;
         }

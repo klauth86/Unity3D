@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace FPS.Master {
-    public class GameManager_ToggleInventoryUI : GameManager_Base {
+    public class GameManager_ToggleInventoryUI : Subscriber_Base<GameManager_Master> {
         [SerializeField]private GameObject _inventoryUI;
 
         private void OnEnable() {
@@ -18,7 +18,7 @@ namespace FPS.Master {
 
         }
 
-        private void ToggleInventoryUI() {
+        public void ToggleInventoryUI() {
             if (_inventoryUI) {
                 _inventoryUI.SetActive(!_inventoryUI.activeSelf);
             }

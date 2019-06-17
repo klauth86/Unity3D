@@ -13,6 +13,12 @@ GameObject:
   - component: {fileID: 553392024130622209}
   - component: {fileID: 553392024119182721}
   - component: {fileID: 553392024117051137}
+  - component: {fileID: 1258993873}
+  - component: {fileID: 3071091685662040852}
+  - component: {fileID: 342744631247053081}
+  - component: {fileID: 6030186546602133379}
+  - component: {fileID: 8051746812414035981}
+  - component: {fileID: 8260327171645676076}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -289,6 +295,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1258993873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42dcdde4aca1d54dbd7548eab6c45e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3071091685662040852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ae5f4364eae2145b0617129750c659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthText: {fileID: 0}
+  _health: 100
+--- !u!114 &342744631247053081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35386c2b9633a5044b05f7276efb56be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hurtCanvas: {fileID: 0}
+  _hurtCanvasExposition: 2
+--- !u!114 &6030186546602133379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbd1650ff5780144936688b6ffb532e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _detectRate: 0.05
+  _detectionLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  _rayCastPivot: {fileID: 553392024124717763}
+  _detectRange: 3
+  _detectRadius: 0.7
+  _hasPickupInRange: 0
+  _availablePickup: {fileID: 0}
+--- !u!114 &8051746812414035981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a997ee35e2052e14d823eb47c70eb107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ammos:
+  - Name: Pistol
+    MaxQuantity: 300
+    Quantity: 30
+--- !u!114 &8260327171645676076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392024124614369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e316bda78e3df4685a903570edd1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryPlayerParent: {fileID: 553392024124717763}
+  _inventoryUIParent: {fileID: 0}
+  _uiButton: {fileID: 545412274720418556, guid: ed8b1fec294557f47bc355be5516ec82,
+    type: 3}
+  _itemHeldInHands: {fileID: 0}
+  _timeToPlaceInHands: 0.1
+  counter: 0
+  _text: 
 --- !u!1 &553392024124614371
 GameObject:
   m_ObjectHideFlags: 0
