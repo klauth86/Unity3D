@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using FPS.Master;
+using FPS.GameManager;
 using System.Collections;
+using FPS.Item;
 
 namespace FPS.Player {
     public class Player_DetectItem : Subscriber_Base<Player_Master> {
@@ -46,7 +47,7 @@ namespace FPS.Player {
 
         private void TryPickUp(KeyCode keyCode) {
             if (keyCode == KeyCode.E && _hasPickupInRange && _availablePickup != null && _availablePickup.root.tag != GameManager_References.PlayerTag && Time.timeScale > 0) {
-                
+                _availablePickup.GetComponent<Item_Master>().CallPickupEvent(_rayCastPivot);
             }
         }
 

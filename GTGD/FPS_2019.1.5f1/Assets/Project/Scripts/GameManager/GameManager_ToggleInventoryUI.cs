@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_ToggleInventoryUI : Subscriber_Base<GameManager_Master> {
         [SerializeField]private GameObject _inventoryUI;
 

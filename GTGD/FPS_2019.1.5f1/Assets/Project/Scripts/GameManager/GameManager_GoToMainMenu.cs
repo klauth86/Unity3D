@@ -1,6 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_GoToMainMenu : Subscriber_Base<GameManager_Master> {
         private void OnEnable() {
             Master.GoToMenuSceneEvent += GoToMenuScene;

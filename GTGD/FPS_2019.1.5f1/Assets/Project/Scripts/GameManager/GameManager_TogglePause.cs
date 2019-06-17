@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_TogglePause : Subscriber_Base<GameManager_Master> {
         private bool _isPaused;
 

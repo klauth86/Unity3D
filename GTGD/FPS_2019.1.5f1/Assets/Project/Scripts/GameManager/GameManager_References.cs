@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_References : MonoBehaviour {
         [SerializeField] private string _playerTag;
         [SerializeField] private string _enemyTag;

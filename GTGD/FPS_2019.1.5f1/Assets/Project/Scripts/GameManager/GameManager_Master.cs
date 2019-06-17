@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_Master : MonoBehaviour {
         public event GameEventHandler ToggleMenuUIEvent;
         public event GameEventHandler ToggleInventoryUIEvent;
@@ -44,6 +44,9 @@ namespace FPS.Master {
 
             if (Input.GetKeyUp(KeyCode.E))
                 InputKeyUpEvent?.Invoke(KeyCode.E);
+
+            if (Input.GetKeyUp(KeyCode.F))
+                InputKeyUpEvent?.Invoke(KeyCode.F);
 
             if (Input.GetKeyUp(KeyCode.Q))
                 CallGameOverEvent();

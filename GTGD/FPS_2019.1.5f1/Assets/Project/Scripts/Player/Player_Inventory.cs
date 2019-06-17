@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 namespace FPS.Player {
     public class Player_Inventory : Subscriber_Base<Player_Master> {
         [SerializeField] private Transform _inventoryPlayerParent;
@@ -81,7 +80,7 @@ namespace FPS.Player {
         IEnumerator PlaceInHandsRoutine(Transform item) {
             yield return new WaitForSeconds(_timeToPlaceInHands);
             _itemHeldInHands = item;
-
+            item.gameObject.SetActive(true);
         }
     }
 }

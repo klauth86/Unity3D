@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPS.Master {
+namespace FPS.GameManager {
     public class GameManager_GameOverUI : Subscriber_Base<GameManager_Master> {
         [SerializeField]private GameObject _gameOverUI;
 

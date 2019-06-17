@@ -1,4 +1,4 @@
-﻿using FPS.Master;
+﻿using FPS.GameManager;
 using UnityEngine;
 
 namespace FPS.Player {
