@@ -34,7 +34,7 @@ namespace FPS.Item {
 
         private void TakeAmmo() {
             GameManager_References.Player.GetComponent<Player_Master>().CallPickupAmmoEvent(_ammo, _quantity);
-            Object.Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

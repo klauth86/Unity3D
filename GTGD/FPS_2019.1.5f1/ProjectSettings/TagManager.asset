@@ -19,9 +19,9 @@ TagManager:
   - 
   - Weapon
   - Item
-  - 
-  - 
-  - 
+  - NotSolid
+  - Player
+  - Enemy
   - 
   - 
   - 
