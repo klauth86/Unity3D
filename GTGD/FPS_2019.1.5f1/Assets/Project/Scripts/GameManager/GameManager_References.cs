@@ -11,7 +11,7 @@ namespace FPS.GameManager {
         public static GameObject Player;
 
         // Start is called before the first frame update
-        private void OnEnable() {
+        private void Awake() {
             PlayerTag = _playerTag;
             EnemyTag = _enemyTag;
             Player = _player;

@@ -1,6 +1,4 @@
 ﻿using FPS.GameManager;
-using System;
-using System.Collections;
 using UnityEngine;
 
 namespace FPS.Item {
