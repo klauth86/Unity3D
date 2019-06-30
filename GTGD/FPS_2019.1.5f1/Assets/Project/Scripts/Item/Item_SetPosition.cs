@@ -21,6 +21,7 @@ namespace FPS.Item {
 
         private void SetLocalPosition() {
             transform.localPosition = _localPos;
+            transform.localRotation = Quaternion.identity;
         }
     }
 }

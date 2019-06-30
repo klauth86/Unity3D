@@ -2712,8 +2712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf21c22a06b81542a3e9d8ef7b7d783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _max: 100
-  _health: 100
+  _max: 500
+  _health: 500
 --- !u!114 &4196155811904504462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,4 +3311,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _multiplier: 0.1
   _massRequirement: 30
-  _velocityRequirement: 2
+  _velocityRequirement: 1
