@@ -7,19 +7,17 @@ namespace FPS.Player {
         [SerializeField] private int _hurtCanvasExposition = 2;
 
         private void OnEnable() {
-            Master.IncreaseHealthEvent += OnChangeHealth;
+            Master.DecreaseHealthEvent += OnChangeHealth;
         }
 
         private void OnDisable() {
-            Master.IncreaseHealthEvent -= OnChangeHealth;
+            Master.DecreaseHealthEvent -= OnChangeHealth;
         }
 
         private void OnChangeHealth(int changeHealth) {
-            if (changeHealth < 0) {
-                StopAllCoroutines();
-                _hurtCanvas.SetActive(true);
-                StartCoroutine(HurtRoutine());
-            }
+            StopAllCoroutines();
+            _hurtCanvas.SetActive(true);
+            StartCoroutine(HurtRoutine());
         }
 
         private IEnumerator HurtRoutine() {

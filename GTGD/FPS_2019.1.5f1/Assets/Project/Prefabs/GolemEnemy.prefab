@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1706266138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706266139}
+  - component: {fileID: 1706266143}
+  - component: {fileID: 1706266142}
+  - component: {fileID: 1706266140}
+  m_Layer: 15
+  m_Name: DamageBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706266139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706266138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 738372343211997086}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1706266143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706266138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 2.5, z: 0.5}
+  m_Center: {x: 0, y: 1.35, z: 0}
+--- !u!54 &1706266142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706266138}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1706266140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706266138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e656de8a7ac872c40bd2e0965383b679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _multiplier: 1
+  _removeCollider: 1
 --- !u!1 &738372341401834863
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +272,7 @@ GameObject:
   - component: {fileID: 738372341575045280}
   - component: {fileID: 738372341575045282}
   - component: {fileID: 738372341575045281}
+  - component: {fileID: 1853464084}
   m_Layer: 15
   m_Name: Bip001 R Thigh
   m_TagString: Untagged
@@ -259,7 +336,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000034570699, y: -0.010383863, z: -0.17352986}
+  m_ConnectedAnchor: {x: 0.0000034570699, y: -0.010384325, z: -0.17352986}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -293,6 +370,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1853464084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372341575045284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372341628149119
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +609,7 @@ GameObject:
   - component: {fileID: 738372341848539850}
   - component: {fileID: 738372341848539852}
   - component: {fileID: 738372341848539851}
+  - component: {fileID: 1077945731}
   m_Layer: 15
   m_Name: Bip001 R UpperArm
   m_TagString: Untagged
@@ -583,7 +673,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.17752433, y: 0.0047431528, z: -0.3693176}
+  m_ConnectedAnchor: {x: -0.17752433, y: 0.0047430038, z: -0.36931747}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -617,6 +707,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1077945731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372341848539854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372341851972020
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +855,8 @@ GameObject:
   - component: {fileID: 738372341922895068}
   - component: {fileID: 738372341922895069}
   - component: {fileID: 738372341922895070}
+  - component: {fileID: 1933146728}
+  - component: {fileID: 1933146729}
   m_Layer: 15
   m_Name: Bip001 Head
   m_TagString: Untagged
@@ -816,7 +920,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.33111474, y: 0.036883906, z: -9.2768425e-11}
+  m_ConnectedAnchor: {x: -0.33111474, y: 0.03688401, z: -9.2768425e-11}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -850,6 +954,32 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1933146728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372341922895056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e656de8a7ac872c40bd2e0965383b679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _multiplier: 5
+  _removeCollider: 0
+--- !u!114 &1933146729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372341922895056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372341932801366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1179,7 @@ GameObject:
   - component: {fileID: 738372342289221070}
   - component: {fileID: 738372342289221068}
   - component: {fileID: 738372342289221069}
+  - component: {fileID: 2003013124}
   m_Layer: 15
   m_Name: Bip001 Pelvis
   m_TagString: Untagged
@@ -1100,6 +1231,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2003013124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372342289221071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372342300104547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1288,7 @@ GameObject:
   - component: {fileID: 738372342377643917}
   - component: {fileID: 738372342377643918}
   - component: {fileID: 738372342377643919}
+  - component: {fileID: 1508350787}
   m_Layer: 15
   m_Name: Bip001 L Forearm
   m_TagString: Untagged
@@ -1208,7 +1352,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5062187, y: 0.000000096817246, z: -0.00000017881388}
+  m_ConnectedAnchor: {x: -0.5062187, y: 0.00000039484047, z: -0.00000017881388}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1242,6 +1386,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1508350787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372342377643905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372342409744677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1567,7 @@ GameObject:
   - component: {fileID: 738372342538133294}
   - component: {fileID: 738372342538133280}
   - component: {fileID: 738372342538133295}
+  - component: {fileID: 296192602}
   m_Layer: 15
   m_Name: Bip001 Spine3
   m_TagString: Untagged
@@ -1473,7 +1630,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.81969905, y: -0.0006918315, z: -0.00003600122}
+  m_ConnectedAnchor: {x: -0.81969905, y: -0.0006914038, z: -0.00003600122}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1507,6 +1664,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &296192602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372342538133282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372342544764274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,6 +1688,7 @@ GameObject:
   - component: {fileID: 738372342544764286}
   - component: {fileID: 738372342544764287}
   - component: {fileID: 738372342544764272}
+  - component: {fileID: 836650183}
   m_Layer: 15
   m_Name: Bip001 L Calf
   m_TagString: Untagged
@@ -1582,7 +1752,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.684044, y: 0.000000013038511, z: -0.00000007470218}
+  m_ConnectedAnchor: {x: -0.684044, y: -0.00000009126958, z: -0.00000007470218}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1616,6 +1786,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &836650183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372342544764274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372342663476213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,6 +2269,7 @@ GameObject:
   - component: {fileID: 738372343115213587}
   - component: {fileID: 738372343115213589}
   - component: {fileID: 738372343115213588}
+  - component: {fileID: 1713385265}
   m_Layer: 15
   m_Name: Bip001 L UpperArm
   m_TagString: Untagged
@@ -2150,7 +2333,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1775248, y: 0.004742825, z: 0.36931717}
+  m_ConnectedAnchor: {x: -0.1775248, y: 0.004742527, z: 0.36931717}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2184,6 +2367,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1713385265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343115213591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372343123680179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2391,7 @@ GameObject:
   - component: {fileID: 738372343123680191}
   - component: {fileID: 738372343123680176}
   - component: {fileID: 738372343123680177}
+  - component: {fileID: 1738663880}
   m_Layer: 15
   m_Name: Bip001 R Calf
   m_TagString: Untagged
@@ -2259,7 +2455,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.6840441, y: 0.000000021420394, z: 0.00000008921044}
+  m_ConnectedAnchor: {x: -0.6840441, y: 0.00000046845472, z: 0.00000008921044}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2293,6 +2489,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1738663880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343123680179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372343211997072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2520,8 @@ GameObject:
   - component: {fileID: 1850255917}
   - component: {fileID: 1850255912}
   - component: {fileID: 8273092689269258503}
+  - component: {fileID: 1790615409}
+  - component: {fileID: 4196155811904504462}
   m_Layer: 15
   m_Name: GolemEnemy
   m_TagString: Untagged
@@ -2332,6 +2542,8 @@ Transform:
   m_Children:
   - {fileID: 738372341887928928}
   - {fileID: 738372342926701043}
+  - {fileID: 1706266139}
+  - {fileID: 974843693001673251}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -1.498, z: 0}
@@ -2488,6 +2700,32 @@ MonoBehaviour:
   _attackRange: 3.5
   _attackDamage: 10
   _attackRate: 1
+--- !u!114 &1790615409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343211997072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf21c22a06b81542a3e9d8ef7b7d783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _max: 100
+  _health: 100
+--- !u!114 &4196155811904504462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343211997072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10c64e55b2a2d4c8dbae8ca1dc9461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372343221787673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2861,7 @@ GameObject:
   - component: {fileID: 738372343276966658}
   - component: {fileID: 738372343276966660}
   - component: {fileID: 738372343276966659}
+  - component: {fileID: 1384011850}
   m_Layer: 15
   m_Name: Bip001 L Thigh
   m_TagString: Untagged
@@ -2686,7 +2925,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000010967256, y: 0.0077876924, z: 0.17365988}
+  m_ConnectedAnchor: {x: -0.000010967256, y: 0.007787588, z: 0.17365988}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2720,6 +2959,18 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1384011850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343276966662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738372343355080479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +3142,7 @@ GameObject:
   - component: {fileID: 738372343515162333}
   - component: {fileID: 738372343515162334}
   - component: {fileID: 738372343515162335}
+  - component: {fileID: 2044952566}
   m_Layer: 15
   m_Name: Bip001 R Forearm
   m_TagString: Untagged
@@ -2954,7 +3206,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.50621855, y: 0.000000022311443, z: 0.00000017881389}
+  m_ConnectedAnchor: {x: -0.5062187, y: 0.00000014152081, z: 0.00000017881389}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2988,3 +3240,75 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2044952566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738372343515162321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faae2447926f3ec42a787be8a7cb07b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7647025610536338858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974843693001673251}
+  - component: {fileID: 1686333047232098731}
+  - component: {fileID: 8812525327945357408}
+  m_Layer: 15
+  m_Name: HitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974843693001673251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647025610536338858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 738372343211997086}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1686333047232098731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647025610536338858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 3, z: 0.75}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &8812525327945357408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647025610536338858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203f8322493567f4d9157dd89c089826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _multiplier: 0.1
+  _massRequirement: 30
+  _velocityRequirement: 2

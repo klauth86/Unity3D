@@ -30,6 +30,9 @@ namespace FPS.Enemy {
         public event GameEventHandler<int> IncreaseHealthEvent;
         public event GameEventHandler<int> DecreaseHealthEvent;
 
+        public event GameEventHandler LowHealthEvent;
+        public event GameEventHandler HighHealthEvent;
+
         public void CallDieEvent() {
             DieEvent?.Invoke();
         }
@@ -62,6 +65,14 @@ namespace FPS.Enemy {
 
         public void CallDecreaseHealthEvent(int amount) {
             DecreaseHealthEvent?.Invoke(amount);
+        }
+
+        public void CallLowHealthEvent() {
+            LowHealthEvent?.Invoke();
+        }
+
+        public void CallHighHealthEvent() {
+            HighHealthEvent?.Invoke();
         }
     }
 }
